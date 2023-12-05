@@ -1004,7 +1004,7 @@ function sockTool(element){
         (document.querySelector("img.sock_one"))
 
     }else if (element.className === "sock_three"){
-        if (document.querySelector("img.sock_three")){document.querySelector("img.sock_one").className = "sook_one_off"}
+        if (document.querySelector("img.sock_one")){document.querySelector("img.sock_one").className = "sook_one_off"}
         if (document.querySelector("img.sock_four")){document.querySelector("img.sock_four").className = "sook_three_off"}
         document.querySelector('span.tool.sook').style.transition = "1s"
         document.querySelector('span.tool.sook').style.opacity = "1"
@@ -1016,8 +1016,8 @@ function sockTool(element){
         (document.querySelector("img.sock_one"))
 
     } else if (element.className === "sock_four"){
-        if (document.querySelector("img.sock_three")){document.querySelector("img.sock_one").className = "sook_one_off"}
-        if (document.querySelector("img.sock_four")){document.querySelector("img.sock_three").className = "sook_three_off"}
+        if (document.querySelector("img.sock_one")){document.querySelector("img.sock_one").className = "sook_one_off"}
+        if (document.querySelector("img.sock_three")){document.querySelector("img.sock_three").className = "sook_three_off"}
         document.querySelector('span.tool.sook').style.transition = "1s"
         document.querySelector('span.tool.sook').style.opacity = "1"
         document.querySelector('.tool.sook').style.left = "58.5rem"
