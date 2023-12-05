@@ -161,8 +161,8 @@ const images = [
     },
 
     {
-        name: "image_mouse&cat" ,
-        src: "assets/images/mouse&cat.svg",
+        name: "image_mouse_and_cat" ,
+        src: "assets/images/mouse_and_cat.svg",
         alt: "mouse_cat",
         className: "mouse_cat",
         style_left: "16rem",
@@ -170,7 +170,6 @@ const images = [
         zIndex: 29,
         item_move: false
     },
-    
 
 
     {
