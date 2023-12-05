@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3feabb12-8f21-4853-ba03-9b86bec20dfa" name="Changes" comment="стул" />
+    <list default="true" id="3feabb12-8f21-4853-ba03-9b86bec20dfa" name="Changes" comment="стул">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/Mouse&amp;cat.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/mouse_and_cat.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/style.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -98,7 +102,7 @@
       <workItem from="1701686171298" duration="1817000" />
       <workItem from="1701711781361" duration="757000" />
       <workItem from="1701713123550" duration="8786000" />
-      <workItem from="1701762595340" duration="1256000" />
+      <workItem from="1701762595340" duration="1730000" />
     </task>
     <task id="LOCAL-00001" summary="стул">
       <option name="closed" value="true" />
@@ -116,7 +120,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701763727694</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="стул">
+      <option name="closed" value="true" />
+      <created>1701763944898</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1701763944899</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
