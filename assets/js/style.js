@@ -710,6 +710,7 @@ function handleTouchEnd() { // --- КОГДА УБИРАЕМ ПАЛЕЦ С ЭК�
     if (document.querySelector("img.cat").item_move === true){
         document.querySelector("img.mouse").alt = "mouse_block"
     }
+    elemBelow = null
 }
 
 document.body.addEventListener('touchend', handleTouchEnd);
