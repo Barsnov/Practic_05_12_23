@@ -611,6 +611,7 @@ const currentElement = { // --- ТЕКУЩАЯ ПЕРЕТАСКИВАЕМАЯ Ц
 };
 
 function handleTouchStart(item){
+    sockToolHide()
     currentElement.current = item.targetTouches[0];
     //------Метод для телефона
     if (currentElement.current.target.className === "phone_mini"){
@@ -618,7 +619,6 @@ function handleTouchStart(item){
         document.querySelector(".question.one").style.opacity = "1"
         document.querySelector(".question.one").style.zIndex = "1000"
     }
-
 
     //----- тут мы обнуляем мышке анимацию
     if ((currentElement.current.target.className === "mouse") && (currentElement.current.target.alt === "mouse")){
@@ -631,10 +631,8 @@ function handleTouchStart(item){
     if (/log/.test(currentElement.current.target.className)){document.querySelector("img.fireplace_on").style.zIndex = "1000"}
 
     if (currentElement.current.target.item_move === true){
-        console.log(item);
         currentElement.current.target.style.zIndex = String(100 + Number(currentElement.current.target.style.zIndex))
         document.body.addEventListener('touchmove', handleTouchMove);
-
 
         //----- тут мы двигаем кота уже вместе с мышкой (планируем)
         if (currentElement.current.target.className === "cat"){
@@ -643,8 +641,6 @@ function handleTouchStart(item){
                 document.querySelector("img.mouse").alt = "mouse0nCat";
             }
         }
-
-
     } else{
         console.log("Объект нельзя выбрать")
     }
@@ -995,7 +991,6 @@ function sockItem(element){
 }
 
 function sockTool(element){
-    console.log(element)
     if (element.className === "sock_one"){
         if (document.querySelector("img.sock_three")){document.querySelector("img.sock_three").className = "sook_three_off"}
         if (document.querySelector("img.sock_four")){document.querySelector("img.sock_four").className = "sook_three_off"}
@@ -1031,6 +1026,13 @@ function sockTool(element){
             document.querySelector('span.tool.sook').style.opacity = '0';
         }, 5000);
         (document.querySelector("img.sock_one"))
+    }
+}
+
+function sockToolHide(){
+    let elements = document.querySelectorAll(".tool")
+    for (let item of elements){
+        item.style.opacity = "0"
     }
 }
 
