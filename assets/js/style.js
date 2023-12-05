@@ -908,10 +908,12 @@ function catTool(){
     if (document.querySelector(".mouse").alt === "mouse") {
         document.querySelector('span.tool.cat').style.transition = "1s"
         document.querySelector('span.tool.cat').style.opacity = "1"
+        document.querySelector('span.tool.cat').style.zIndex = "1000"
         document.querySelector('.tool.cat').style.left = "20rem"
         document.querySelector('.tool.cat').style.top = "35rem"
         setTimeout(() =>{
             document.querySelector('span.tool.cat').style.opacity = '0';
+            document.querySelector('span.tool.cat').style.zIndex = '1';
         }, 5000);
     }
 }
@@ -926,21 +928,25 @@ function matchesTool(){
     if (document.querySelector("img.matches").item_move === false){
         document.querySelector('span.tool.matches').style.transition = "1s"
         document.querySelector('span.tool.matches').style.opacity = "1"
+        document.querySelector('span.tool.matches').style.zIndex = "1000"
         document.querySelector('.tool.matches').style.left = "35rem"
         document.querySelector('.tool.matches').style.top = "50rem"
         setTimeout(() =>{
             document.querySelector('span.tool.matches').style.opacity = '0';
+            document.querySelector('span.tool.matches').style.zIndex = '1';
         }, 5000);
     }
 }
 
 function logCatTool(){
     if (document.querySelector("img.carpet_two_block")){
+        document.querySelector('span.tool.log').style.zIndex = "1000"
         document.querySelector('span.tool.log').style.transition = "1s"
         document.querySelector('span.tool.log').style.opacity = "1"
         document.querySelector('.tool.log').style.left = "52rem"
         document.querySelector('.tool.log').style.top = "55rem"
         setTimeout(() =>{
+            document.querySelector('span.tool.log').style.zIndex = '1';
             document.querySelector('span.tool.log').style.opacity = '0';
         }, 5000);
     }
@@ -956,10 +962,12 @@ function logTool(){
     if ((document.querySelector("img.carpet_two_block")) && (document.querySelector("img.log.six").item_move === true)){
         document.querySelector('span.tool.log_carpet').style.transition = "1s"
         document.querySelector('span.tool.log_carpet').style.opacity = "1"
+        document.querySelector('span.tool.log_carpet').style.zIndex = "1000"
         document.querySelector('.tool.log_carpet').style.left = "85rem"
         document.querySelector('.tool.log_carpet').style.top = "47rem"
         setTimeout(() =>{
             document.querySelector('span.tool.log_carpet').style.opacity = '0';
+            document.querySelector('span.tool.log_carpet').style.zIndex = '1';
         }, 5000);
     }
 }
@@ -974,15 +982,16 @@ function bookTool(){
     if (document.querySelector("img.book_in_shelf").alt === "book_in_shelf_off"){
         document.querySelector('span.tool.book').style.transition = "1s"
         document.querySelector('span.tool.book').style.opacity = "1"
+        document.querySelector('span.tool.book').style.zIndex = "1000"
         document.querySelector('.tool.book').style.left = "58rem"
         document.querySelector('.tool.book').style.top = "30rem"
         setTimeout(() =>{
             document.querySelector('span.tool.book').style.opacity = '0';
+            document.querySelector('span.tool.book').style.zIndex = '1';
         }, 5000);
     }
     console.log(document.querySelector("img.book_in_shelf").alt)
 }
-
 
 function sockItem(element){
     if (/sock/.test(element.className)){
@@ -996,11 +1005,9 @@ function sockTool(element){
         if (document.querySelector("img.sock_four")){document.querySelector("img.sock_four").className = "sook_four_off"}
         document.querySelector('span.tool.sook').style.transition = "1s"
         document.querySelector('span.tool.sook').style.opacity = "1"
+        document.querySelector('span.tool.sook').style.zIndex = '1000';
         document.querySelector('.tool.sook').style.left = "58.5rem"
-        document.querySelector('.tool.sook').style.top = "20rem"
-        setTimeout(() =>{
-            document.querySelector('span.tool.sook').style.opacity = '0';
-        }, 5000);
+        document.querySelector('.tool.sook').style.top = "20rem";
         (document.querySelector("img.sock_one"))
 
     }else if (element.className === "sock_three"){
@@ -1008,11 +1015,9 @@ function sockTool(element){
         if (document.querySelector("img.sock_four")){document.querySelector("img.sock_four").className = "sook_four_off"}
         document.querySelector('span.tool.sook').style.transition = "1s"
         document.querySelector('span.tool.sook').style.opacity = "1"
+        document.querySelector('span.tool.sook').style.zIndex = '1000';
         document.querySelector('.tool.sook').style.left = "58.5rem"
-        document.querySelector('.tool.sook').style.top = "20rem"
-        setTimeout(() =>{
-            document.querySelector('span.tool.sook').style.opacity = '0';
-        }, 5000);
+        document.querySelector('.tool.sook').style.top = "20rem";
         (document.querySelector("img.sock_one"))
 
     }else if (element.className === "sock_four") {
@@ -1020,23 +1025,26 @@ function sockTool(element){
         if (document.querySelector("img.sock_three")) {document.querySelector("img.sock_three").className = "sook_three_off"}
         document.querySelector('span.tool.sook').style.transition = "1s"
         document.querySelector('span.tool.sook').style.opacity = "1"
+        document.querySelector('span.tool.sook').style.zIndex = '1000';
         document.querySelector('.tool.sook').style.left = "58.5rem"
-        document.querySelector('.tool.sook').style.top = "20rem"
-        setTimeout(() => {
-            document.querySelector('span.tool.sook').style.opacity = '0';
-        }, 5000);
+        document.querySelector('.tool.sook').style.top = "20rem";
         (document.querySelector("img.sock_one"))
     }else if (element.className === "sock_two"){
         if (document.querySelector("img.sock_one")){document.querySelector("img.sock_one").className = "sook_one_off"}
         if (document.querySelector("img.sock_three")){document.querySelector("img.sock_three").className = "sook_three_off"}
         if (document.querySelector("img.sock_four")){document.querySelector("img.sock_four").className = "sook_four_off"}
     }
+    setTimeout(() =>{
+        document.querySelector('span.tool.sook').style.opacity = '0';
+        document.querySelector('span.tool.sook').style.zIndex = '0';
+    }, 5000);
 }
 
 function sockToolHide(){
     let elements = document.querySelectorAll(".tool")
     for (let item of elements){
         item.style.opacity = "0"
+        item.style.zIndex = "1"
     }
 }
 
