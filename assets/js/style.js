@@ -985,7 +985,7 @@ function bookTool(){
 
 
 function sockItem(element){
-    if ((element.className === "sock_one") || (element.className === "sock_three") || (element.className === "sock_four")){
+    if (/sock/.test(element.className)){
         element.onclick = () => {sockTool(element)}
     }
 }
@@ -993,7 +993,7 @@ function sockItem(element){
 function sockTool(element){
     if (element.className === "sock_one"){
         if (document.querySelector("img.sock_three")){document.querySelector("img.sock_three").className = "sook_three_off"}
-        if (document.querySelector("img.sock_four")){document.querySelector("img.sock_four").className = "sook_three_off"}
+        if (document.querySelector("img.sock_four")){document.querySelector("img.sock_four").className = "sook_four_off"}
         document.querySelector('span.tool.sook').style.transition = "1s"
         document.querySelector('span.tool.sook').style.opacity = "1"
         document.querySelector('.tool.sook').style.left = "58.5rem"
@@ -1005,7 +1005,7 @@ function sockTool(element){
 
     }else if (element.className === "sock_three"){
         if (document.querySelector("img.sock_one")){document.querySelector("img.sock_one").className = "sook_one_off"}
-        if (document.querySelector("img.sock_four")){document.querySelector("img.sock_four").className = "sook_three_off"}
+        if (document.querySelector("img.sock_four")){document.querySelector("img.sock_four").className = "sook_four_off"}
         document.querySelector('span.tool.sook').style.transition = "1s"
         document.querySelector('span.tool.sook').style.opacity = "1"
         document.querySelector('.tool.sook').style.left = "58.5rem"
@@ -1015,17 +1015,21 @@ function sockTool(element){
         }, 5000);
         (document.querySelector("img.sock_one"))
 
-    } else if (element.className === "sock_four"){
-        if (document.querySelector("img.sock_one")){document.querySelector("img.sock_one").className = "sook_one_off"}
-        if (document.querySelector("img.sock_three")){document.querySelector("img.sock_three").className = "sook_three_off"}
+    }else if (element.className === "sock_four") {
+        if (document.querySelector("img.sock_one")) {document.querySelector("img.sock_one").className = "sook_one_off"}
+        if (document.querySelector("img.sock_three")) {document.querySelector("img.sock_three").className = "sook_three_off"}
         document.querySelector('span.tool.sook').style.transition = "1s"
         document.querySelector('span.tool.sook').style.opacity = "1"
         document.querySelector('.tool.sook').style.left = "58.5rem"
         document.querySelector('.tool.sook').style.top = "20rem"
-        setTimeout(() =>{
+        setTimeout(() => {
             document.querySelector('span.tool.sook').style.opacity = '0';
         }, 5000);
         (document.querySelector("img.sock_one"))
+    }else if (element.className === "sock_two"){
+        if (document.querySelector("img.sock_one")){document.querySelector("img.sock_one").className = "sook_one_off"}
+        if (document.querySelector("img.sock_three")){document.querySelector("img.sock_three").className = "sook_three_off"}
+        if (document.querySelector("img.sock_four")){document.querySelector("img.sock_four").className = "sook_four_off"}
     }
 }
 
