@@ -1,0 +1,324 @@
+@import "font.css";
+
+*{
+    font-family: "Roboto", serif;
+    margin: 0;
+    box-sizing: border-box;
+    font-style: normal;
+    transition: .2s;
+}
+
+html,
+body{
+    height: 100%;
+    touch-action: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.class_room{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    position: absolute;
+}
+
+.class_room img{
+    position: absolute;
+}
+
+.class_room img.fireplace_on,
+.class_room img.book_in_shelf,
+.class_room img.mouse_cat{
+    opacity: 0;
+}
+
+@keyframes mouse{
+    0%{
+        left: 77.2rem;
+        top: 28rem;
+    }
+
+    99%{
+        left: 75.5rem;
+        top: 25rem;
+        z-index: 5;
+    }
+
+    100%{
+        left: 75.5rem;
+        top: 25rem;
+        z-index: 18;
+    }
+}
+
+
+/*-----------------------------------------Для задания в задании */
+.question{
+    width: 1920px;
+    height: 1080px;
+    background: rgba(0, 0, 0, .5);
+    position: absolute;
+    z-index: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.question.one .phone_bg{
+    left: 7rem;
+    top: 9rem;
+    position: absolute;
+    width: 405px;
+    height: 820px;
+    overflow: hidden;
+    background: #2a66a5;
+    border-radius: 4rem;
+    display: flex;
+    justify-content: center;
+    border: 20px solid #263238;
+}
+
+.question.one img.father{  /*Father_bottom сюда пихать!!!!!*/
+    position: absolute;
+    left: 40rem;
+    top: 13rem;
+    border-radius: 5rem;
+}
+
+.question.one .phone_bg .bg{
+    width: 420px;
+    height: 825px;
+    background-image: url("../images/phone_bg.svg");
+    background-size: cover;
+    background-position-y: -1.5rem;
+    background-position-x: -1.5rem;
+
+    display: flex;
+    justify-content: center;
+}
+
+
+.question.one .phone_bg img.lock{
+    position: absolute;
+    left: 11.7rem;
+    top: 3.4rem;
+    width: 94px;
+    height: 254px;
+    opacity: .5;
+
+}
+
+.question.one .phone_bg .bg label input{
+    text-align: center;
+    border: 0;
+    border-radius: .7rem;
+    width: 145px;
+    height: 55px;
+    background-color: #4D4D4D;
+    color: white;
+    font-weight: 700;
+    font-size: 2rem;
+    position: relative;
+    z-index: 20;
+    top: 12.4rem;
+    left: 0.3rem;
+}
+
+.question.one .phone_bg .bg label button{
+    border: 0;
+    position: absolute;
+    width: 50px;
+    height: 40px;
+    outline: 4px solid #4D4D4D ;
+    outline-offset: 0;
+    background: #C83737;
+    border-radius: 40%;
+    filter: blur(5px);
+    top: 38rem;
+    left: 9rem;
+    animation: button_lock 1s linear infinite alternate;
+}
+
+@keyframes button_lock{
+    0%{
+        outline-offset: 0;
+    }
+
+    100%{
+        outline-offset: 0.5rem;
+    }
+}
+
+@keyframes Father_bottom {
+    0%{
+       left: 40rem;
+    }
+
+    100%{
+        left: 150rem;
+    }
+}
+
+.question.one .quest.father{ /*Father_top сюда пихать!!!!!*/
+    width: 835px;
+    height: 835px;
+    border-radius: 5%;
+    overflow: hidden;
+    position: absolute;
+    left: 51rem;
+    top: -100rem;
+    background-color: rgba(255, 255, 255, 0.7);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.question.one .quest .image_quest{
+    width: 100%;
+    height: 60%;    background-image: url("../../NewYearsWorkshop/postalWorker.jpg");
+    background-size: cover;
+}
+
+.question.one .quest label{
+    margin-bottom: 2rem;
+    height: 30%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.question.one .quest label input,
+.question.one .quest label button{
+    height: 40%;
+    width: 80%;
+    border-radius: 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+    border: 5px solid #66b4d7;
+    text-align: center;
+}
+
+.question.one .quest label button{
+    background-color: aquamarine;
+    border: 1px;
+}
+
+@keyframes Father_top {
+    0%{
+        top: -100rem;
+    }
+
+    100%{
+        top: 8rem;
+    }
+}
+
+/*-----------------------------------------Для остальных заданий */
+
+.question .quest{
+    width: 835px;
+    height: 835px;
+    border-radius: 5%;
+    overflow: hidden;
+    position: absolute;
+    left: 32rem;
+    top: 8rem;
+    background-color: rgb(255, 255, 255, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.question.five .quest{
+    width: 1000px;
+    height: 1000px;
+    left: 28rem;
+    top: 2rem;
+}
+
+.question .quest .image_quest{
+    width: 100%;
+    height: 60%;
+    background-size: cover;
+}
+
+.question.two .quest .image_quest {
+    background-image: url("../../NewYearsWorkshop/crosswordPuzzle.jpg");
+    background-position-x: -1.8rem;
+}
+.question.three .quest .image_quest {
+    background-image: url("../../NewYearsWorkshop/puzzle.jpg");
+    background-position-x: 1rem;
+}
+.question.four .quest .image_quest {
+    background-image: url("../../NewYearsWorkshop/whereIsTheLogic.jpg");
+    background-position-x: -3rem;
+}
+.question.five .quest .image_quest {
+    background-image: url("../../NewYearsWorkshop/snowFlakes.jpg");
+}
+
+.question .quest label{
+    margin-bottom: 2rem;
+    height: 30%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.question .quest label input,
+.question .quest label button{
+    height: 40%;
+    width: 80%;
+    border-radius: 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+    border: 5px solid #42b2a5;
+    text-align: center;
+}
+
+.question .quest label button{
+    border: 1px;
+    background-color: aquamarine;
+}
+
+
+/*---------*/
+.end{
+    width: 1920px;
+    height: 1080px;
+    background-image: url("../../NewYearsWorkshop/hooray.jpg");
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+}
+
+.tool{
+    position: fixed;
+    max-width: 35rem;
+    padding: 1rem 3rem;
+    border-radius: .5rem;
+    border: .5rem dashed #b3c9ce;
+    text-align: center;
+    color: #333;
+    background-color: rgba(255, 255, 255, .9);
+    z-index: 1000;
+    font-size: 2rem;
+    font-weight: 600;
+    opacity: 0;
+}
+
