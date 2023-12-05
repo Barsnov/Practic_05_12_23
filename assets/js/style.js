@@ -611,7 +611,8 @@ const currentElement = { // --- ТЕКУЩАЯ ПЕРЕТАСКИВАЕМАЯ Ц
 };
 
 function handleTouchStart(item){
-    sockToolHide()
+    ToolHide()
+
     currentElement.current = item.targetTouches[0];
     //------Метод для телефона
     if (currentElement.current.target.className === "phone_mini"){
@@ -851,6 +852,7 @@ function catInCarpet(){
             currentElement.current.target.style.left = "94rem";
             currentElement.current.target.style.top = "51.25rem";
             document.querySelector("img.mouse_cat").style.transform = "scaleX(1)";
+            document.querySelector("img.mouse_cat").item_move = false
             document.querySelector(".question.two").style.transition = "2s"
             document.querySelector(".question.two").style.opacity = "1"
             document.querySelector(".question.two").style.zIndex = "1000"
@@ -897,8 +899,8 @@ function  FirePlaceOnMatches(){
 }
 
 
-
 //-------- Метод для кота и некоторых других объектов, дающий подсказку
+let timer = 0
 function cat(element){
     if (element.className === "cat"){
         element.addEventListener("click", catTool)
@@ -912,7 +914,7 @@ function catTool(){
         document.querySelector('span.tool.cat').style.zIndex = "1000"
         document.querySelector('.tool.cat').style.left = "20rem"
         document.querySelector('.tool.cat').style.top = "35rem"
-        setTimeout(() =>{
+        timer = setTimeout(() =>{
             document.querySelector('span.tool.cat').style.opacity = '0';
             document.querySelector('span.tool.cat').style.zIndex = '1';
         }, 5000);
@@ -932,7 +934,7 @@ function matchesTool(){
         document.querySelector('span.tool.matches').style.zIndex = "1000"
         document.querySelector('.tool.matches').style.left = "35rem"
         document.querySelector('.tool.matches').style.top = "50rem"
-        setTimeout(() =>{
+        timer = setTimeout(() =>{
             document.querySelector('span.tool.matches').style.opacity = '0';
             document.querySelector('span.tool.matches').style.zIndex = '1';
         }, 5000);
@@ -946,7 +948,7 @@ function logCatTool(){
         document.querySelector('span.tool.log').style.opacity = "1"
         document.querySelector('.tool.log').style.left = "52rem"
         document.querySelector('.tool.log').style.top = "55rem"
-        setTimeout(() =>{
+        timer = setTimeout(() =>{
             document.querySelector('span.tool.log').style.zIndex = '1';
             document.querySelector('span.tool.log').style.opacity = '0';
         }, 5000);
@@ -966,7 +968,7 @@ function logTool(){
         document.querySelector('span.tool.log_carpet').style.zIndex = "1000"
         document.querySelector('.tool.log_carpet').style.left = "85rem"
         document.querySelector('.tool.log_carpet').style.top = "47rem"
-        setTimeout(() =>{
+        timer = setTimeout(() =>{
             document.querySelector('span.tool.log_carpet').style.opacity = '0';
             document.querySelector('span.tool.log_carpet').style.zIndex = '1';
         }, 5000);
@@ -986,7 +988,7 @@ function bookTool(){
         document.querySelector('span.tool.book').style.zIndex = "1000"
         document.querySelector('.tool.book').style.left = "58rem"
         document.querySelector('.tool.book').style.top = "30rem"
-        setTimeout(() =>{
+        timer = setTimeout(() =>{
             document.querySelector('span.tool.book').style.opacity = '0';
             document.querySelector('span.tool.book').style.zIndex = '1';
         }, 5000);
@@ -1004,7 +1006,6 @@ function sockTool(element){
     if (element.className === "sock_one"){
         if (document.querySelector("img.sock_three")){document.querySelector("img.sock_three").className = "sook_three_off"}
         if (document.querySelector("img.sock_four")){document.querySelector("img.sock_four").className = "sook_four_off"}
-        document.querySelector('span.tool.sook').style.transition = "1s"
         document.querySelector('span.tool.sook').style.opacity = "1"
         document.querySelector('span.tool.sook').style.zIndex = '1000';
         document.querySelector('.tool.sook').style.left = "58.5rem"
@@ -1014,7 +1015,6 @@ function sockTool(element){
     }else if (element.className === "sock_three"){
         if (document.querySelector("img.sock_one")){document.querySelector("img.sock_one").className = "sook_one_off"}
         if (document.querySelector("img.sock_four")){document.querySelector("img.sock_four").className = "sook_four_off"}
-        document.querySelector('span.tool.sook').style.transition = "1s"
         document.querySelector('span.tool.sook').style.opacity = "1"
         document.querySelector('span.tool.sook').style.zIndex = '1000';
         document.querySelector('.tool.sook').style.left = "58.5rem"
@@ -1024,7 +1024,6 @@ function sockTool(element){
     }else if (element.className === "sock_four") {
         if (document.querySelector("img.sock_one")) {document.querySelector("img.sock_one").className = "sook_one_off"}
         if (document.querySelector("img.sock_three")) {document.querySelector("img.sock_three").className = "sook_three_off"}
-        document.querySelector('span.tool.sook').style.transition = "1s"
         document.querySelector('span.tool.sook').style.opacity = "1"
         document.querySelector('span.tool.sook').style.zIndex = '1000';
         document.querySelector('.tool.sook').style.left = "58.5rem"
@@ -1035,17 +1034,18 @@ function sockTool(element){
         if (document.querySelector("img.sock_three")){document.querySelector("img.sock_three").className = "sook_three_off"}
         if (document.querySelector("img.sock_four")){document.querySelector("img.sock_four").className = "sook_four_off"}
     }
-    setTimeout(() =>{
+     timer = setTimeout(() =>{
         document.querySelector('span.tool.sook').style.opacity = '0';
-        document.querySelector('span.tool.sook').style.zIndex = '0';
+        document.querySelector('span.tool.sook').style.zIndex = '1';
     }, 5000);
 }
 
-function sockToolHide(){
+function ToolHide(){
     let elements = document.querySelectorAll(".tool")
     for (let item of elements){
         item.style.opacity = "0"
         item.style.zIndex = "1"
+        clearInterval(timer)
     }
 }
 
