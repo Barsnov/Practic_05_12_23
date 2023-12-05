@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3feabb12-8f21-4853-ba03-9b86bec20dfa" name="Changes" comment="стул" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2YfA7oKRKgROhjwfzJ6lhFWYuv7" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/Desktop/Производственная Практика",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.grazie",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Desktop\Производственная Практика\assets\images" />
+      <recent name="D:\Desktop\Производственная Практика\assets\css" />
+      <recent name="D:\Desktop\Производственная Практика" />
+      <recent name="D:\Desktop\Производственная Практика\assets\js" />
+      <recent name="D:\Desktop\Производственная Практика\assets" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="style.js" type="NodeJSConfigurationType" nameIsGenerated="true" path-to-js-file="style.js" working-dir="$PROJECT_DIR$/assets/js">
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3feabb12-8f21-4853-ba03-9b86bec20dfa" name="Changes" comment="" />
+      <created>1700906095707</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1700906095707</updated>
+      <workItem from="1700906096707" duration="6840000" />
+      <workItem from="1701044955123" duration="4053000" />
+      <workItem from="1701091573199" duration="593000" />
+      <workItem from="1701337038311" duration="3894000" />
+      <workItem from="1701350295178" duration="19451000" />
+      <workItem from="1701418886733" duration="7816000" />
+      <workItem from="1701427812458" duration="2405000" />
+      <workItem from="1701441526552" duration="5272000" />
+      <workItem from="1701468607907" duration="2420000" />
+      <workItem from="1701516358705" duration="22561000" />
+      <workItem from="1701608420729" duration="33837000" />
+      <workItem from="1701661293499" duration="4111000" />
+      <workItem from="1701665458378" duration="11275000" />
+      <workItem from="1701678622424" duration="37000" />
+      <workItem from="1701679223050" duration="939000" />
+      <workItem from="1701681250860" duration="4381000" />
+      <workItem from="1701686171298" duration="1817000" />
+      <workItem from="1701711781361" duration="757000" />
+      <workItem from="1701713123550" duration="8786000" />
+      <workItem from="1701762595340" duration="1256000" />
+    </task>
+    <task id="LOCAL-00001" summary="стул">
+      <option name="closed" value="true" />
+      <created>1701763618128</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1701763618128</updated>
+    </task>
+    <task id="LOCAL-00002" summary="стул">
+      <option name="closed" value="true" />
+      <created>1701763727694</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1701763727694</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="стул" />
+    <option name="LAST_COMMIT_MESSAGE" value="стул" />
+  </component>
+</project>
