@@ -406,7 +406,7 @@ const images = [
     {
         name: "image_book_on_shelf" ,
         src: "assets/images/book_on_shelf.svg",
-        alt: "book_in_shelf",
+        alt: "book_in_shelf_off",
         className: "book_in_shelf",
         style_left: "73.6rem",
         style_top: "6.1rem",
@@ -591,6 +591,9 @@ function createItem(item){
         element.className = "carpet_two_block"
     }
 
+    sockItem (element)
+    bookItem(element)
+    logItem(element)
     matches(element)
     cat(element)
     sock(element)
@@ -674,7 +677,6 @@ function handleTouchMove(event) {
 }
 
 function item_document(event, item){
-
     if (event.touches[0].pageX < 40) {
         item.style.left = event.touches[0].pageX - item.offsetWidth / 2 + 50 + 'px';
     } else if (event.touches[0].pageX > window.screen.width - 30) {
@@ -859,7 +861,7 @@ function catInCarpet(){
         } else {
             currentElement.current.target.style.left = "15.5rem";
             currentElement.current.target.style.top = "47rem";
-            logTool()
+            logCatTool()
         }
     }
 }
@@ -869,6 +871,7 @@ function  bookInFireplace(){
     if (currentElement.current.target.className === "book_in_frplc"){
         if ((elemBelow.className === "books")||((elemBelow.className === "book_in_shelf"))){
             currentElement.current.target.style.opacity = '0';
+            (document.querySelector("img.book_in_shelf").alt = "book_in_shelf_on")
             document.querySelector(".book_in_shelf").style.opacity = "1"
             document.querySelector(".question.three").style.transition = "2s"
             document.querySelector(".question.three").style.opacity = "1"
@@ -917,7 +920,6 @@ function catTool(){
     }
 }
 
-
 function matches(element){
     if (element.className === "matches"){
         element.addEventListener("click", matchesTool)
@@ -936,7 +938,7 @@ function matchesTool(){
     }
 }
 
-function logTool(){
+function logCatTool(){
     if (document.querySelector("img.carpet_two_block")){
         document.querySelector('span.tool.log').style.transition = "1s"
         document.querySelector('span.tool.log').style.opacity = "1"
@@ -947,4 +949,90 @@ function logTool(){
         }, 5000);
     }
 }
+
+function logItem(element){
+    if (element.className === "log six"){
+        element.addEventListener("click", logTool)
+    }
+}
+
+function logTool(){
+    if ((document.querySelector("img.carpet_two_block")) && (document.querySelector("img.log.six").item_move === true)){
+        document.querySelector('span.tool.log_carpet').style.transition = "1s"
+        document.querySelector('span.tool.log_carpet').style.opacity = "1"
+        document.querySelector('.tool.log_carpet').style.left = "85rem"
+        document.querySelector('.tool.log_carpet').style.top = "47rem"
+        setTimeout(() =>{
+            document.querySelector('span.tool.log_carpet').style.opacity = '0';
+        }, 5000);
+    }
+}
+
+function bookItem(element){
+    if (element.className === "book_in_frplc"){
+        element.addEventListener("click", bookTool)
+    }
+}
+
+function bookTool(){
+    if (document.querySelector("img.book_in_shelf").alt === "book_in_shelf_off"){
+        document.querySelector('span.tool.book').style.transition = "1s"
+        document.querySelector('span.tool.book').style.opacity = "1"
+        document.querySelector('.tool.book').style.left = "58rem"
+        document.querySelector('.tool.book').style.top = "30rem"
+        setTimeout(() =>{
+            document.querySelector('span.tool.book').style.opacity = '0';
+        }, 5000);
+    }
+    console.log(document.querySelector("img.book_in_shelf").alt)
+}
+
+
+function sockItem(element){
+    if ((element.className === "sock_one") || (element.className === "sock_three") || (element.className === "sock_four")){
+        element.onclick = () => {sockTool(element)}
+    }
+}
+
+function sockTool(element){
+    console.log(element)
+    if (element.className === "sock_one"){
+        if (document.querySelector("img.sock_three")){document.querySelector("img.sock_three").className = "sook_three_off"}
+        if (document.querySelector("img.sock_four")){document.querySelector("img.sock_four").className = "sook_three_off"}
+        document.querySelector('span.tool.sook').style.transition = "1s"
+        document.querySelector('span.tool.sook').style.opacity = "1"
+        document.querySelector('.tool.sook').style.left = "58.5rem"
+        document.querySelector('.tool.sook').style.top = "20rem"
+        setTimeout(() =>{
+            document.querySelector('span.tool.sook').style.opacity = '0';
+        }, 5000);
+        (document.querySelector("img.sock_one"))
+
+    }else if (element.className === "sock_three"){
+        if (document.querySelector("img.sock_three")){document.querySelector("img.sock_one").className = "sook_one_off"}
+        if (document.querySelector("img.sock_four")){document.querySelector("img.sock_four").className = "sook_three_off"}
+        document.querySelector('span.tool.sook').style.transition = "1s"
+        document.querySelector('span.tool.sook').style.opacity = "1"
+        document.querySelector('.tool.sook').style.left = "58.5rem"
+        document.querySelector('.tool.sook').style.top = "20rem"
+        setTimeout(() =>{
+            document.querySelector('span.tool.sook').style.opacity = '0';
+        }, 5000);
+        (document.querySelector("img.sock_one"))
+
+    } else if (element.className === "sock_four"){
+        if (document.querySelector("img.sock_three")){document.querySelector("img.sock_one").className = "sook_one_off"}
+        if (document.querySelector("img.sock_four")){document.querySelector("img.sock_three").className = "sook_three_off"}
+        document.querySelector('span.tool.sook').style.transition = "1s"
+        document.querySelector('span.tool.sook').style.opacity = "1"
+        document.querySelector('.tool.sook').style.left = "58.5rem"
+        document.querySelector('.tool.sook').style.top = "20rem"
+        setTimeout(() =>{
+            document.querySelector('span.tool.sook').style.opacity = '0';
+        }, 5000);
+        (document.querySelector("img.sock_one"))
+    }
+}
+
+
 

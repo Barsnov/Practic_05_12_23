@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="3feabb12-8f21-4853-ba03-9b86bec20dfa" name="Changes" comment="стул">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/Mouse&amp;cat.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/mouse_and_cat.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +25,33 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Bar_snov &lt;egor.barsnov@gmail.com&gt;" />
+      </list>
+    </option>
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Barsnov"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="e94ce598-9a66-4427-8897-b3862379bd3f" />
+        <option name="url" value="https://github.com/Barsnov/Practic_05_12_23.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -102,7 +129,7 @@
       <workItem from="1701686171298" duration="1817000" />
       <workItem from="1701711781361" duration="757000" />
       <workItem from="1701713123550" duration="8786000" />
-      <workItem from="1701762595340" duration="1730000" />
+      <workItem from="1701762595340" duration="6339000" />
     </task>
     <task id="LOCAL-00001" summary="стул">
       <option name="closed" value="true" />
@@ -128,7 +155,23 @@
       <option name="project" value="LOCAL" />
       <updated>1701763944899</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="стул">
+      <option name="closed" value="true" />
+      <created>1701764358345</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1701764358345</updated>
+    </task>
+    <task id="LOCAL-00005" summary="стул">
+      <option name="closed" value="true" />
+      <created>1701764599880</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1701764599880</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
