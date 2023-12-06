@@ -485,8 +485,8 @@ function comparison(id) {
             document.querySelector(".quest.father").style.animationFillMode = "forwards";
             document.querySelector("img.father").style.animation = "Father_bottom 2s linear";
             document.querySelector("img.father").style.animationFillMode = "forwards";
-            document.querySelector(".code_Father").readOnly = "readonly";
             counter ++
+            document.querySelector("button#code_Father").onclick = "";
         }else{
             document.querySelector(".phone_bg").style.background = "#ef1a24";
         }
@@ -499,6 +499,7 @@ function comparison(id) {
             document.querySelector(".question.one").style.zIndex = "0";
             document.querySelector(".phone_mini").className = "block";
             document.querySelector("#quest_Father").className = "block";
+            document.querySelector("button#quest_Father").onclick = "";
         }else{
             document.querySelector(".quest_Father.one").style.borderColor = "#ef1a24";
         }
@@ -510,6 +511,7 @@ function comparison(id) {
             document.querySelector(".question.two").style.opacity = "0"
             document.querySelector(".question.two").style.zIndex = "0"
             document.querySelector("#quest_two").className = "block";
+            document.querySelector("button#quest_two").onclick = "";
 
         }else{
             document.querySelector(".quest_Father.two").style.borderColor = "#ef1a24";
@@ -521,8 +523,8 @@ function comparison(id) {
             counter ++
             document.querySelector(".question.three").style.opacity = "0"
             document.querySelector(".question.three").style.zIndex = "0"
-
             document.querySelector("#quest_three").className = "block";
+            document.querySelector("button#quest_three").onclick = "";
         }else{
             document.querySelector(".quest_Father.three").style.borderColor = "#ef1a24";
         }
@@ -534,6 +536,7 @@ function comparison(id) {
             document.querySelector(".question.four").style.opacity = "0"
             document.querySelector(".question.four").style.zIndex = "0"
             document.querySelector("#quest_four").className = "block";
+            document.querySelector("button#quest_four").onclick = "";
         }else{
             document.querySelector(".quest_Father.four").style.borderColor = "#ef1a24";
         }
@@ -545,6 +548,7 @@ function comparison(id) {
             document.querySelector(".question.five").style.opacity = "0"
             document.querySelector(".question.five").style.zIndex = "0"
             document.querySelector("#quest_five").className = "block";
+            document.querySelector("button#quest_five").onclick = "";
         }else{
             document.querySelector(".quest_Father.five").style.borderColor = "#ef1a24";
         }
@@ -837,6 +841,7 @@ function cat_mouse(){
             document.querySelector("img.cat").style.opacity = "0"
             document.querySelector("img.mouse_cat").style.transform = "scaleX(-1)";
 
+            cat_mouse_log()
             document.body.addEventListener('touchmove', handleTouchMove);
 
         } else{
@@ -857,13 +862,17 @@ function catInCarpet(){
             document.querySelector(".question.two").style.opacity = "1"
             document.querySelector(".question.two").style.zIndex = "1000"
             document.querySelector("img.matches").item_move = true;
-        } else {
+        }else if((elemBelow.querySelector("img.carpet_two_block")) && (elemBelow.className ==="carpet_two_block") || (/log/.test(elemBelow.className))){
+            logCatTool()
             currentElement.current.target.style.left = "15.5rem";
             currentElement.current.target.style.top = "47rem";
-            logCatTool()
+        } else{
+            currentElement.current.target.style.left = "15.5rem";
+            currentElement.current.target.style.top = "47rem";
         }
     }
 }
+
 
 //------- Метод для книжки, чтобы убрать её на полку
 function  bookInFireplace(){
@@ -881,6 +890,7 @@ function  bookInFireplace(){
         }
     }
 }
+
 
 //------- Метод для спичичнего коробка, чтобы зажечь каминчик
 function  FirePlaceOnMatches(){
@@ -993,7 +1003,6 @@ function bookTool(){
             document.querySelector('span.tool.book').style.zIndex = '1';
         }, 5000);
     }
-    console.log(document.querySelector("img.book_in_shelf").alt)
 }
 
 function sockItem(element){
@@ -1040,6 +1049,20 @@ function sockTool(element){
     }, 5000);
 }
 
+function cat_mouse_log() {
+    if (document.querySelector("img.carpet_two_block")) {
+        document.querySelector('span.tool.cat_mouse_log').style.transition = "1s"
+        document.querySelector('span.tool.cat_mouse_log').style.opacity = "1"
+        document.querySelector('span.tool.cat_mouse_log').style.zIndex = "1000"
+        document.querySelector('.tool.cat_mouse_log').style.left = "35rem"
+        document.querySelector('.tool.cat_mouse_log').style.top = "50rem"
+        timer = setTimeout(() => {
+            document.querySelector('span.tool.cat_mouse_log').style.opacity = '0';
+            document.querySelector('span.tool.cat_mouse_log').style.zIndex = '1';
+        }, 5000);
+    }
+}
+
 function ToolHide(){
     let elements = document.querySelectorAll(".tool")
     for (let item of elements){
@@ -1048,6 +1071,7 @@ function ToolHide(){
         clearInterval(timer)
     }
 }
+
 
 
 
