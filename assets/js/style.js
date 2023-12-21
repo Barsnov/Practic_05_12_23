@@ -617,46 +617,46 @@ const currentElement = { // --- ТЕКУЩАЯ ПЕРЕТАСКИВАЕМАЯ Ц
 
 //-------------
 function handleTouchStart(item){
-    ToolHide()
+        ToolHide()
 
-    if (item.targetTouches[item.targetTouches.length - 1].target.item_move === true){
-        console.log(currentElement.current)
-        if (currentElement.current === null){
-            currentElement.current = item.targetTouches[item.targetTouches.length - 1];
-            currentElement.zIndex = item.targetTouches[item.targetTouches.length - 1].target.style.zIndex;
-        }
-
-        currentElement.current.target.style.zIndex = "150"
-        document.body.addEventListener('touchmove', handleTouchMove);
-
-        //----- тут мы двигаем кота уже вместе с мышкой (планируем)
-        if (currentElement.current.target.className === "cat"){
-            document.querySelector("img.cat").style.zIndex = "30"
-            if(document.querySelector("img.mouse").alt === "mouse_block"){
-                document.querySelector("img.mouse").alt = "mouse0nCat";
+        if (item.targetTouches[item.targetTouches.length - 1].target.item_move === true){
+            console.log(currentElement.current)
+            if (currentElement.current === null){
+                currentElement.current = item.targetTouches[item.targetTouches.length - 1];
+                currentElement.zIndex = item.targetTouches[item.targetTouches.length - 1].target.style.zIndex;
             }
+
+            currentElement.current.target.style.zIndex = "150"
+            document.body.addEventListener('touchmove', handleTouchMove);
+
+            //----- тут мы двигаем кота уже вместе с мышкой (планируем)
+            if (currentElement.current.target.className === "cat"){
+                document.querySelector("img.cat").style.zIndex = "30"
+                if(document.querySelector("img.mouse").alt === "mouse_block"){
+                    document.querySelector("img.mouse").alt = "mouse0nCat";
+                }
+            }
+        } else if (item.targetTouches[item.targetTouches.length - 1].target.item_move === false){
+                console.log("Объект нельзя выбрать")
         }
-    } else if (item.targetTouches[item.targetTouches.length - 1].target.item_move === false){
-        console.log("Объект нельзя выбрать")
-    }
 
-    //------Метод для телефона
-    if (currentElement.current.target.className === "phone_mini"){
-        document.querySelector(".question.one").style.transition = "2s"
-        document.querySelector(".question.one").style.opacity = "1"
-        document.querySelector(".question.one").style.zIndex = "1000"
-    }
+        //------Метод для телефона
+        if (item.targetTouches[item.targetTouches.length - 1].target.className === "phone_mini"){
+            document.querySelector(".question.one").style.transition = "2s"
+            document.querySelector(".question.one").style.opacity = "1"
+            document.querySelector(".question.one").style.zIndex = "1000"
+        }
 
-    //----- тут мы обнуляем мышке анимацию
-    if ((currentElement.current.target.className === "mouse") && (currentElement.current.target.alt === "mouse")){
-        document.querySelector("img.mouse").style.animation = "";
-        currentElement.current.target.style.left = "75.5rem";
-        currentElement.current.target.style.top = "25rem";
-        currentElement.current.target.style.zIndex = "31";
-    }
+        //----- тут мы обнуляем мышке анимацию
+        if ((currentElement.current.target.className === "mouse") && (currentElement.current.target.alt === "mouse")){
+            document.querySelector("img.mouse").style.animation = "";
+            currentElement.current.target.style.left = "75.5rem";
+            currentElement.current.target.style.top = "25rem";
+            currentElement.current.target.style.zIndex = "31";
+        }
 
-    if (/log/.test(currentElement.current.target.className)){document.querySelector("img.fireplace_on").style.zIndex = "1000"}
-}
+        if (/log/.test(currentElement.current.target.className)){document.querySelector("img.fireplace_on").style.zIndex = "1000"}
+    }
 
 function handleTouchMove(event) {
     if (currentElement.current !== null){ // --- ЕСЛИ ПЕРЕТАСКИВАЕМАЯ ЦЕЛЬ ОПРЕДЕЛЕНА
@@ -829,6 +829,9 @@ function click_Sock_Two(){
     document.querySelector("img.mouse").style.animation = "mouse 2s linear";
     document.querySelector("img.mouse").style.animationFillMode = "forwards";
     document.querySelector("img.sock_two").removeEventListener("click", click_Sock_Two)
+    setTimeout(()=>{
+        document.querySelector("img.mouse").style.zIndex = "18";
+    }, 2000)
 }
 
 function cat_mouse(){
