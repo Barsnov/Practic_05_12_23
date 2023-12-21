@@ -619,7 +619,9 @@ const currentElement = { // --- ТЕКУЩАЯ ПЕРЕТАСКИВАЕМАЯ Ц
 function handleTouchStart(item){
     ToolHide()
 
-    currentElement.current = item.targetTouches[0];
+    currentElement.current = item.targetTouches[item.targetTouches.length - 1];
+    currentElement.zIndex = item.targetTouches[item.targetTouches.length - 1].target.style.zIndex;
+
     //------Метод для телефона
     if (currentElement.current.target.className === "phone_mini"){
         document.querySelector(".question.one").style.transition = "2s"
@@ -638,7 +640,6 @@ function handleTouchStart(item){
     if (/log/.test(currentElement.current.target.className)){document.querySelector("img.fireplace_on").style.zIndex = "1000"}
 
     if (currentElement.current.target.item_move === true){
-        currentElement.zIndex = currentElement.current.target.style.zIndex
         currentElement.current.target.style.zIndex = "150"
         document.body.addEventListener('touchmove', handleTouchMove);
 
