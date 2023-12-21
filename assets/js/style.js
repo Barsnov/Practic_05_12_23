@@ -622,6 +622,8 @@ function handleTouchStart(item){
     currentElement.current = item.targetTouches[item.targetTouches.length - 1];
     currentElement.zIndex = item.targetTouches[item.targetTouches.length - 1].target.style.zIndex;
 
+    console.log(currentElement.current)
+
     //------Метод для телефона
     if (currentElement.current.target.className === "phone_mini"){
         document.querySelector(".question.one").style.transition = "2s"
