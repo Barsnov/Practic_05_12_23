@@ -612,8 +612,10 @@ document.addEventListener("DOMContentLoaded", ()=>{
 // -----------
 const currentElement = { // --- ТЕКУЩАЯ ПЕРЕТАСКИВАЕМАЯ ЦЕЛЬ
     current: null,
+    zIndex: null
 };
 
+//-------------
 function handleTouchStart(item){
     ToolHide()
 
@@ -636,7 +638,8 @@ function handleTouchStart(item){
     if (/log/.test(currentElement.current.target.className)){document.querySelector("img.fireplace_on").style.zIndex = "1000"}
 
     if (currentElement.current.target.item_move === true){
-        currentElement.current.target.style.zIndex = String(100 + Number(currentElement.current.target.style.zIndex))
+        currentElement.zIndex = currentElement.current.target.style.zIndex
+        currentElement.current.target.style.zIndex = "150"
         document.body.addEventListener('touchmove', handleTouchMove);
 
         //----- тут мы двигаем кота уже вместе с мышкой (планируем)
@@ -692,13 +695,14 @@ function item_document(event, item){
 
 function handleTouchEnd() { // --- КОГДА УБИРАЕМ ПАЛЕЦ С ЭКРАНА - ТЕКУЩИЙ ПЕРЕМЕЩАЕМЫЙ ОБЪЕКТ ОБНУЛЯЕТСЯ
     if (currentElement.current.target.item_move === true){
-        currentElement.current.target.style.zIndex = String(Number(currentElement.current.target.style.zIndex) - 100)
+        currentElement.current.target.style.zIndex = currentElement.zIndex
         log()
         cat_mouse()
         bookInFireplace()
         catInCarpet()
         FirePlaceOnMatches()
         currentElement.current = null;
+        currentElement.zIndex = null;
     } else{
         console.log("Объекту нельзя заканчивать что-то")
     }
