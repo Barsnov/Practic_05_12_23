@@ -620,7 +620,6 @@ function handleTouchStart(item){
         ToolHide()
 
         if (item.targetTouches[item.targetTouches.length - 1].target.item_move === true){
-            console.log(currentElement.current)
             if (currentElement.current === null){
                 currentElement.current = item.targetTouches[item.targetTouches.length - 1];
                 currentElement.zIndex = item.targetTouches[item.targetTouches.length - 1].target.style.zIndex;
@@ -648,14 +647,14 @@ function handleTouchStart(item){
         }
 
         //----- тут мы обнуляем мышке анимацию
-        if ((currentElement.current.target.className === "mouse") && (currentElement.current.target.alt === "mouse")){
+        if ((item.targetTouches[item.targetTouches.length - 1].target.className === "mouse") && (item.targetTouches[item.targetTouches.length - 1].target.alt === "mouse")){
             document.querySelector("img.mouse").style.animation = "";
             currentElement.current.target.style.left = "75.5rem";
             currentElement.current.target.style.top = "25rem";
             currentElement.current.target.style.zIndex = "31";
         }
 
-        if (/log/.test(currentElement.current.target.className)){document.querySelector("img.fireplace_on").style.zIndex = "1000"}
+        if (/log/.test(item.targetTouches[item.targetTouches.length - 1].target.className)){document.querySelector("img.fireplace_on").style.zIndex = "1000"}
     }
 
 function handleTouchMove(event) {
@@ -696,32 +695,34 @@ function item_document(event, item){
 }
 
 function handleTouchEnd() { // --- КОГДА УБИРАЕМ ПАЛЕЦ С ЭКРАНА - ТЕКУЩИЙ ПЕРЕМЕЩАЕМЫЙ ОБЪЕКТ ОБНУЛЯЕТСЯ
-    if (currentElement.current.target.item_move === true){
-        currentElement.current.target.style.zIndex = currentElement.zIndex
-        log()
-        cat_mouse()
-        bookInFireplace()
-        catInCarpet()
-        FirePlaceOnMatches()
-        currentElement.current = null;
-        currentElement.zIndex = null;
-    } else{
-        console.log("Объекту нельзя заканчивать что-то")
-    }
+    if (currentElement.current !== null){
+        if (currentElement.current.target.item_move === true){
+            currentElement.current.target.style.zIndex = currentElement.zIndex
+            log()
+            cat_mouse()
+            bookInFireplace()
+            catInCarpet()
+            FirePlaceOnMatches()
+            currentElement.current = null;
+            currentElement.zIndex = null;
+        } else{
+            console.log("Объекту нельзя заканчивать что-то")
+        }
 
-    if (document.querySelector("img.mouse").alt !== "Mouse_block"){
-        document.querySelector("img.cat").style.zIndex = "30"
-    }
+        if (document.querySelector("img.mouse").alt !== "Mouse_block"){
+            document.querySelector("img.cat").style.zIndex = "30"
+        }
 
-    if (document.querySelector("img.mouse").alt === "Mouse_block"){
-        document.querySelector("img.cat").item_move = false;
-        document.querySelector("img.cat").style.zIndex = "30";
-    }
+        if (document.querySelector("img.mouse").alt === "Mouse_block"){
+            document.querySelector("img.cat").item_move = false;
+            document.querySelector("img.cat").style.zIndex = "30";
+        }
 
-    if (document.querySelector("img.cat").item_move === true){
-        document.querySelector("img.mouse").alt = "mouse_block"
+        if (document.querySelector("img.cat").item_move === true){
+            document.querySelector("img.mouse").alt = "mouse_block"
+        }
+        elemBelow = null
     }
-    elemBelow = null
 }
 
 document.body.addEventListener('touchend', handleTouchEnd);
