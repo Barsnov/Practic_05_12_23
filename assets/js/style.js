@@ -732,7 +732,6 @@ function check_Class(event, item){
     item.style.display = 'none';
     elemBelow = document.elementFromPoint(event.touches[0].pageX, event.touches[0].pageY);
     item.style.display = 'block';
-    console.log(elemBelow.className)
 }
 
 
