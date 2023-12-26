@@ -8,7 +8,7 @@ document.querySelector("body").appendChild(background)
 const images = [
     {
         name: "image_back",
-        src: "assets/images/background.svg",
+        src: "./assets/images/background.svg",
         alt: "background",
         className: "background",
         style_left: "-2.5rem",
@@ -19,7 +19,7 @@ const images = [
 
     {
         name: "image_carpet" ,
-        src: "assets/images/carpet.svg",
+        src: "./assets/images/carpet.svg",
         alt: "carpet",
         className: "carpet",
         style_left: "45rem",
@@ -30,7 +30,7 @@ const images = [
 
     {
         name: "image_gift_one" ,
-        src: "assets/images/gift_one.svg",
+        src: "./assets/images/gift_one.svg",
         alt: "gift_one",
         className: "gift_one",
         style_left: "52rem",
@@ -41,7 +41,7 @@ const images = [
 
     {
         name: "image_gift_two" ,
-        src: "assets/images/gift_two.svg",
+        src: "./assets/images/gift_two.svg",
         alt: "gift_two",
         className: "gift_two",
         style_left: "33rem",
@@ -52,7 +52,7 @@ const images = [
 
     {
         name: "image_gift_three",
-        src: "assets/images/gift_three.svg",
+        src: "./assets/images/gift_three.svg",
         alt: "gift_three",
         className: "gift_three",
         style_left: "43rem",
@@ -63,7 +63,7 @@ const images = [
 
     {
         name: "image_gift_four" ,
-        src: "assets/images/gift_four.svg",
+        src: "./assets/images/gift_four.svg",
         alt: "gift_four",
         className: "gift_four",
         style_left: "61rem",
@@ -74,7 +74,7 @@ const images = [
 
     {
         name: "image_gift_five" ,
-        src: "assets/images/gift_five.svg",
+        src: "./assets/images/gift_five.svg",
         alt: "gift_five",
         className: "gift_five",
         style_left: "56rem",
@@ -85,7 +85,7 @@ const images = [
 
     {
         name: "image_gift_six" ,
-        src: "assets/images/gift_six.svg",
+        src: "./assets/images/gift_six.svg",
         alt: "gift_six",
         className: "gift_six",
         style_left: "54.5rem",
@@ -96,7 +96,7 @@ const images = [
 
     {
         name: "image_gift_seven" ,
-        src: "assets/images/gift_seven.svg",
+        src: "./assets/images/gift_seven.svg",
         alt: "gift_seven",
         className: "gift_seven",
         style_left: "44rem",
@@ -107,7 +107,7 @@ const images = [
 
     {
         name: "image_gift_eight" ,
-        src: "assets/images/gift_eight.svg",
+        src: "./assets/images/gift_eight.svg",
         alt: "gift_eight",
         className: "gift_eight",
         style_left: "36rem",
@@ -118,7 +118,7 @@ const images = [
 
     {
         name: "image_gift_nine" ,
-        src: "assets/images/gift_nine.svg",
+        src: "./assets/images/gift_nine.svg",
         alt: "gift_nine",
         className: "gift_nine",
         style_left: "51rem",
@@ -129,7 +129,7 @@ const images = [
 
     {
         name: "image_wreath" ,
-        src: "assets/images/wreath.svg",
+        src: "./assets/images/wreath.svg",
         alt: "wreath",
         className: "wreath",
         style_left: "70.7rem",
@@ -140,7 +140,7 @@ const images = [
 
     {
         name: "image_matches" ,
-        src: "assets/images/matches.svg",
+        src: "./assets/images/matches.svg",
         alt: "matches",
         className: "matches",
         style_left: "20rem",
@@ -151,7 +151,7 @@ const images = [
 
     {
         name: "image_cat" ,
-        src: "assets/images/cat.svg",
+        src: "./assets/images/cat.svg",
         alt: "cat",
         className: "cat",
         style_left: "15.5rem",
@@ -162,7 +162,7 @@ const images = [
 
     {
         name: "image_mouse_and_cat" ,
-        src: "assets/images/mouse_and_cat.svg",
+        src: "./assets/images/mouse_and_cat.svg",
         alt: "mouse_cat",
         className: "mouse_cat",
         style_left: "16rem",
@@ -174,7 +174,7 @@ const images = [
 
     {
         name: "image_tree" ,
-        src: "assets/images/сhristmas_tree.svg",
+        src: "./assets/images/сhristmas_tree.svg",
         alt: "tree",
         className: "tree",
         style_left: "24rem",
@@ -185,7 +185,7 @@ const images = [
 
     {
         name: "image_mouse" ,
-        src: "assets/images/mouse.svg",
+        src: "./assets/images/mouse.svg",
         alt: "mouse",
         className: "mouse",
         style_left: "77.2rem",
@@ -196,7 +196,7 @@ const images = [
 
     {
         name: "image_cup" ,
-        src: "assets/images/cup.svg",
+        src: "./assets/images/cup.svg",
         alt: "cup",
         className: "cup",
         style_left: "77rem",
@@ -207,7 +207,7 @@ const images = [
 
     {
         name: "image_phone" ,
-        src: "assets/images/phone_mini.svg",
+        src: "./assets/images/phone_mini.svg",
         alt: "phone_mini",
         className: "phone_mini",
         style_left: "70rem",
@@ -218,7 +218,7 @@ const images = [
 
     {
         name: "image_armchair" ,
-        src: "assets/images/armchair.svg",
+        src: "./assets/images/armchair.svg",
         alt: "armchair",
         className: "armchair",
         style_left: "80rem",
@@ -229,7 +229,7 @@ const images = [
 
     {
         name: "image_sock_one" ,
-        src: "assets/images/sock_one.svg",
+        src: "./assets/images/sock_one.svg",
         alt: "sock_one",
         className: "sock_one",
         style_left: "81rem",
@@ -240,7 +240,7 @@ const images = [
 
     {
         name: "image_sock_two" ,
-        src: "assets/images/sock_two.svg",
+        src: "./assets/images/sock_two.svg",
         alt: "sock_two",
         className: "sock_two",
         style_left: "76rem",
@@ -251,7 +251,7 @@ const images = [
 
     {
         name: "image_sock_three" ,
-        src: "assets/images/sock_three.svg",
+        src: "./assets/images/sock_three.svg",
         alt: "sock_three",
         className: "sock_three",
         style_left: "71rem",
@@ -262,7 +262,7 @@ const images = [
 
     {
         name: "image_sock_four" ,
-        src: "assets/images/sock_four.svg",
+        src: "./assets/images/sock_four.svg",
         alt: "sock_four",
         className: "sock_four",
         style_left: "66rem",
@@ -273,7 +273,7 @@ const images = [
 
     {
         name: "image_log_one" ,
-        src: "assets/images/log.svg",
+        src: "./assets/images/log.svg",
         alt: "log one",
         className: "log one",
         style_left: "94rem",
@@ -284,7 +284,7 @@ const images = [
 
     {
         name: "image_log_two" ,
-        src: "assets/images/log.svg",
+        src: "./assets/images/log.svg",
         alt: "log two",
         className: "log two",
         style_left: "95rem",
@@ -295,7 +295,7 @@ const images = [
 
     {
         name: "image_log_three" ,
-        src: "assets/images/log.svg",
+        src: "./assets/images/log.svg",
         alt: "log three",
         className: "log three",
         style_left: "96rem",
@@ -306,7 +306,7 @@ const images = [
 
     {
         name: "image_log_four" ,
-        src: "assets/images/log.svg",
+        src: "./assets/images/log.svg",
         alt: "log four",
         className: "log four",
         style_left: "94.5rem",
@@ -317,7 +317,7 @@ const images = [
 
     {
         name: "image_log_five" ,
-        src: "assets/images/log.svg",
+        src: "./assets/images/log.svg",
         alt: "log five",
         className: "log five",
         style_left: "95.5rem",
@@ -328,7 +328,7 @@ const images = [
 
     {
         name: "image_log_six" ,
-        src: "assets/images/log.svg",
+        src: "./assets/images/log.svg",
         alt: "log six",
         className: "log six",
         style_left: "95rem",
@@ -339,7 +339,7 @@ const images = [
 
     {
         name: "image_table" ,
-        src: "assets/images/table.svg",
+        src: "./assets/images/table.svg",
         alt: "table",
         className: "table",
         style_left: "68rem",
@@ -350,7 +350,7 @@ const images = [
 
     {
         name: "image_window_one" ,
-        src: "assets/images/window_one.svg",
+        src: "./assets/images/window_one.svg",
         alt: "window_one",
         className: "window_one",
         style_left: "-3.5rem",
@@ -361,7 +361,7 @@ const images = [
 
     {
         name: "image_window_two" ,
-        src: "assets/images/window_two.svg",
+        src: "./assets/images/window_two.svg",
         alt: "window_two",
         className: "window_two",
         style_left: "74rem",
@@ -372,7 +372,7 @@ const images = [
 
     {
         name: "image_fireplace_off" ,
-        src: "assets/images/fireplace_off.svg",
+        src: "./assets/images/fireplace_off.svg",
         alt: "fireplace_off",
         className: "fireplace_off",
         style_left: "60rem",
@@ -383,7 +383,7 @@ const images = [
 
     {
         name: "image_fireplace_on" ,
-        src: "assets/images/fireplace_on.svg",
+        src: "./assets/images/fireplace_on.svg",
         alt: "fireplace_on",
         className: "fireplace_on",
         style_left: "60.5rem",
@@ -394,7 +394,7 @@ const images = [
 
     {
         name: "image_book_in_frplc" ,
-        src: "assets/images/book_in_frplc.svg",
+        src: "./assets/images/book_in_frplc.svg",
         alt: "book_in_frplc",
         className: "book_in_frplc",
         style_left: "70rem",
@@ -405,7 +405,7 @@ const images = [
 
     {
         name: "image_book_on_shelf" ,
-        src: "assets/images/book_on_shelf.svg",
+        src: "./assets/images/book_on_shelf.svg",
         alt: "book_in_shelf_off",
         className: "book_in_shelf",
         style_left: "73.6rem",
@@ -416,7 +416,7 @@ const images = [
 
     {
         name: "image_books" ,
-        src: "assets/images/shelf_with_books.svg",
+        src: "./assets/images/shelf_with_books.svg",
         alt: "books",
         className: "books",
         style_left: "62rem",
@@ -427,7 +427,7 @@ const images = [
 
     {
         name: "image_watch" ,
-        src: "assets/images/watch.svg",
+        src: "./assets/images/watch.svg",
         alt: "watch",
         className: "watch",
         style_left: "50rem",
@@ -438,7 +438,7 @@ const images = [
 
     {
         name: "image_carpet_one" ,
-        src: "assets/images/carpet_one.svg",
+        src: "./assets/images/carpet_one.svg",
         alt: "carpet_one",
         className: "carpet_one",
         style_left: "9rem",
@@ -449,7 +449,7 @@ const images = [
 
     {
         name: "image_carpet_two" ,
-        src: "assets/images/carpet_two.svg",
+        src: "./assets/images/carpet_two.svg",
         alt: "carpet_two",
         className: "carpet_two",
         style_left: "90rem",
