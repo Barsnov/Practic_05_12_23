@@ -555,9 +555,11 @@ function comparison(id) {
         // ---------- 5
     }
     if (counter === 6){
-        document.querySelector(".end").style.transition = "5s"
-        document.querySelector(".end").style.zIndex = "1000"
-        document.querySelector(".end").style.opacity = "1"
+        setTimeout(()=>{
+            document.querySelector(".end").style.transition = "5s"
+            document.querySelector(".end").style.zIndex = "1000"
+            document.querySelector(".end").style.opacity = "1"
+        }, 1500)
     }
     console.log(counter)
 }
